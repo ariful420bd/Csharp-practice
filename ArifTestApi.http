@@ -1,0 +1,6 @@
+@ArifTestApi_HostAddress = http://localhost:5192
+
+GET {{ArifTestApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

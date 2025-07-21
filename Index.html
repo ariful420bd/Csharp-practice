@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arif_test Database Forms</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="container bg-white p-8 rounded-xl shadow-lg">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Arif_test Database Forms</h1>
+
+        <!-- Navigation Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <button id="navEmployee" class="btn-nav active">Employee</button>
+            <button id="navCustomer" class="btn-nav">Customer</button>
+            <button id="navProductPurchase" class="btn-nav">Product Purchase</button>
+            <button id="navProductSales" class="btn-nav">Product Sales</button>
+        </div>
+
+        <!-- Message Box for status updates -->
+        <div id="messageBox" class="message-box hidden"></div>
+
+        <!-- Employee Form -->
+        <div id="employeeFormSection" class="form-section active">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Add New Employee</h2>
+            <form id="employeeForm" class="space-y-4"> <!-- Adjusted space-y for tighter packing -->
+                <div class="flex flex-col sm:flex-row sm:gap-4">
+                    <div class="flex-1 mb-4 sm:mb-0">
+                        <label for="employeeFirstName">First Name:</label>
+                        <input type="text" id="employeeFirstName" name="firstName" class="mt-1" required>
+                    </div>
+                    <div class="flex-1">
+                        <label for="employeeLastName">Last Name:</label>
+                        <input type="text" id="employeeLastName" name="lastName" class="mt-1" required>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-4">
+                    <div class="flex-1 mb-4 sm:mb-0">
+                        <label for="employeeDesignation">Designation:</label>
+                        <input type="text" id="employeeDesignation" name="designation" class="mt-1">
+                    </div>
+                    <div class="flex-1">
+                        <label for="employeePost">Post:</label>
+                        <input type="text" id="employeePost" name="post" class="mt-1">
+                    </div>
+                </div>
+                <div>
+                    <label for="employeeContactNo">Contact No:</label>
+                    <input type="text" id="employeeContactNo" name="contactNo" class="mt-1">
+                </div>
+                <div>
+                    <label for="employeeDistrict">District:</label>
+                    <input type="text" id="employeeDistrict" name="district" class="mt-1">
+                </div>
+                <div>
+                    <label for="employeePresentAddress">Present Address:</label>
+                    <textarea id="employeePresentAddress" name="presentAddress" rows="2" class="mt-1"></textarea> <!-- Reduced rows -->
+                </div>
+                <div>
+                    <input type="checkbox" id="sameAsPresentAddress" class="mr-2">
+                    <label for="sameAsPresentAddress" class="inline-block font-normal text-gray-600">Permanent address same as Present address</label>
+                </div>
+                <div>
+                    <label for="employeePermanentAddress">Permanent Address:</label>
+                    <textarea id="employeePermanentAddress" name="permanentAddress" rows="2" class="mt-1"></textarea> <!-- Reduced rows -->
+                </div>
+                <div>
+                    <label for="employeeEducationQualification">Education Qualification:</label>
+                    <input type="text" id="employeeEducationQualification" name="educationQualification" class="mt-1">
+                </div>
+                <div>
+                    <label for="employeeRemarks">Remarks:</label>
+                    <textarea id="employeeRemarks" name="remarks" rows="2" class="mt-1"></textarea> <!-- Reduced rows -->
+                </div>
+                <button type="submit" class="w-full btn-primary mt-6">Add Employee</button>
+            </form>
+        </div>
+
+        <!-- Customer Form -->
+        <div id="customerFormSection" class="form-section">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Add New Customer</h2>
+            <form id="customerForm" class="space-y-4"> <!-- Adjusted space-y -->
+                <div>
+                    <label for="customerName">Name:</label>
+                    <input type="text" id="customerName" name="name" class="mt-1" required>
+                </div>
+                <div>
+                    <label for="customerContactNo">Contact No:</label>
+                    <input type="text" id="customerContactNo" name="contactNo" class="mt-1">
+                </div>
+                <div>
+                    <label for="customerAddress">Address:</label>
+                    <textarea id="customerAddress" name="address" rows="2" class="mt-1"></textarea> <!-- Reduced rows -->
+                </div>
+                <div>
+                    <label for="customerReference">Reference:</label>
+                    <input type="text" id="customerReference" name="reference" class="mt-1">
+                </div>
+                <button type="submit" class="w-full btn-primary mt-6">Add Customer</button>
+            </form>
+        </div>
+
+        <!-- Product Purchase Form -->
+        <div id="productPurchaseFormSection" class="form-section">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Record Product Purchase</h2>
+            <form id="productPurchaseForm" class="space-y-4"> <!-- Adjusted space-y -->
+                <div>
+                    <label for="purchaseProductId">Product ID:</label>
+                    <input type="number" id="purchaseProductId" name="productID" class="mt-1" required>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-4">
+                    <div class="flex-1 mb-4 sm:mb-0">
+                        <label for="purchaseCategory">Category:</label>
+                        <input type="text" id="purchaseCategory" name="category" class="mt-1">
+                    </div>
+                    <div class="flex-1">
+                        <label for="purchaseProductName">Product Name:</label>
+                        <input type="text" id="purchaseProductName" name="productName" class="mt-1" required>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-4">
+                    <div class="flex-1 mb-4 sm:mb-0">
+                        <label for="purchaseQuantity">Quantity:</label>
+                        <input type="number" id="purchaseQuantity" name="quantity" step="0.01" class="mt-1" required>
+                    </div>
+                    <div class="flex-1">
+                        <label for="purchaseUnit">Unit:</label>
+                        <input type="text" id="purchaseUnit" name="unit" class="mt-1">
+                    </div>
+                </div>
+                <div>
+                    <label for="purchaseRemarks">Remarks:</label>
+                    <textarea id="purchaseRemarks" name="remarks" rows="2" class="mt-1"></textarea> <!-- Reduced rows -->
+                </div>
+                <button type="submit" class="w-full btn-primary mt-6">Record Purchase</button>
+            </form>
+        </div>
+
+        <!-- Product Sales Form -->
+        <div id="productSalesFormSection" class="form-section">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Record Product Sales</h2>
+            <form id="productSalesForm" class="space-y-4"> <!-- Adjusted space-y -->
+                <div>
+                    <label for="salesProductId">Product ID:</label>
+                    <input type="number" id="salesProductId" name="productID" class="mt-1" required>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-4">
+                    <div class="flex-1 mb-4 sm:mb-0">
+                        <label for="salesCategory">Category:</label>
+                        <input type="text" id="salesCategory" name="category" class="mt-1">
+                    </div>
+                    <div class="flex-1">
+                        <label for="salesProductName">Product Name:</label>
+                        <input type="text" id="salesProductName" name="productName" class="mt-1" required>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-4">
+                    <div class="flex-1 mb-4 sm:mb-0">
+                        <label for="salesQuantity">Quantity:</label>
+                        <input type="number" id="salesQuantity" name="quantity" step="0.01" class="mt-1" required>
+                    </div>
+                    <div class="flex-1">
+                        <label for="salesUnit">Unit:</label>
+                        <input type="text" id="salesUnit" name="unit" class="mt-1">
+                    </div>
+                </div>
+                <div>
+                    <label for="salesRemarks">Remarks:</label>
+                    <textarea id="salesRemarks" name="remarks" rows="2" class="mt-1"></textarea> <!-- Reduced rows -->
+                </div>
+                <button type="submit" class="w-full btn-primary mt-6">Record Sales</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
